@@ -2,9 +2,9 @@
     'use strict';
 
     var serviceId = 'datacontext';
-    angular.module('app').factory(serviceId, ['common','entityManagerFactory', datacontext]);
+    angular.module('app').factory(serviceId, ['common','entityManagerFactory', 'config', datacontext]);
 
-    function datacontext(common, emFactory) {
+    function datacontext(common, emFactory, config) {
         var EntityQuery = breeze.EntityQuery;
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(serviceId);
