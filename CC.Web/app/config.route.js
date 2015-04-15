@@ -59,6 +59,16 @@
                         content: '<i class="fa fa-user"></i> Speakers'
                     }
                 }
+            }, {
+                url: '/attendees',
+                config: {
+                    title: 'attendees',
+                    templateUrl: 'app/attendee/attendees.html',
+                    settings: {
+                        nav: 5,
+                        content: '<i class="fa fa-group"></i> Attendees'
+                    }
+                }
             }
         ];
     }

@@ -116,6 +116,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\attendee\attendees.html" />
+    <Content Include="app\attendee\attendees.js" />
     <Content Include="app\services\model.js" />
     <Content Include="app\session\sessions.html" />
     <Content Include="app\session\sessions.js" />

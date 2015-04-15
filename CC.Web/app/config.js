@@ -12,7 +12,7 @@
 
     var imageSettings = {
         imageBasePath: '../content/images/photos/',
-        unknownPersonImageSource: 'unknow_person.png'
+        unknownPersonImageSource: 'unknown_person.jpg'
     }
 
     var events = {

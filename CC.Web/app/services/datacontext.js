@@ -27,6 +27,7 @@
 
 
         var service = {
+            getAttendees: getAttendees,
             getPeople: getPeople,
             getMessageCount: getMessageCount,
             getSessionPartials: getSessionPartials,
@@ -49,6 +50,26 @@
                 { firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming' }
             ];
             return $q.when(people);
+        }
+
+        function getAttendees() {
+            var orderBy = 'firstName, lastName';
+            var attendees = [];
+
+
+            return EntityQuery.from('Persons')
+                .select('id, firstName, lastName, imageSource')
+                .orderBy(orderBy)
+                .toType('Person')
+                .using(manager).execute()
+                .to$q(querySucceeded, _queryFailed);
+            function querySucceeded(data) {
+                attendees = data.results;
+                log('Retrivied [Attendees] from remote source', attendees.length, true)
+                return attendees;
+            }
+
+            
         }
 
         function getSpeakerPartials() {
