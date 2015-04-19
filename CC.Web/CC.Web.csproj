@@ -123,6 +123,7 @@
     <Content Include="app\session\sessions.js" />
     <Content Include="app\speaker\speakers.html" />
     <Content Include="app\speaker\speakers.js" />
+    <Content Include="App_Data\.gitignore" />
     <Content Include="ccfavicon.ico" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
